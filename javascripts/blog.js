@@ -58,7 +58,7 @@ let blogs1 = [
 ];
 
 let contentArea = document.getElementById("list-view");
-var contentArea2 = document.getElementById("add-view");
+var contentArea2 = document.getElementById("add-view-div");
 
 addToDom();
 function addToDom(){

@@ -26,9 +26,9 @@ function displayNewBlogs() {
   var blogDateInput = document.getElementById("date");
   var blogAuthorInput = document.getElementById("author");
   var blogEntryInput = document.getElementById("entry");
-  var blogKeywordInput = document.getElementById("keyword");
+  var blogKeywordInput = document.getElementById("keywords");
   
-  blogs1.unshift({title: blogTitleInput.value, date: blogDateInput.value, author: blogAuthorInput.value, entry: blogEntryInput, keywords: blogKeywordInput});
+  blogs1.unshift({title: blogTitleInput.value, date: blogDateInput.value, author: blogAuthorInput.value, entry: blogEntryInput.value, keywords: blogKeywordInput.value});
   
 }
 
