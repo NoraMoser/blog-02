@@ -54,24 +54,24 @@ let blogs1 = [
         author: "Nora Moser",
         entry: "API documentation and firebase.",
         keywords: "API"
-     },
+     }
 ];
 
 let contentArea = document.getElementById("list-view");
 var contentArea2 = document.getElementById("add-view-div");
 
-addToDom();
-function addToDom(){
-for (i = 0; i < blogs1.length; i++) {
-	console.log(blogs1[i]);
-	contentArea.innerHTML += `<div class="blog-one">
-								<h2>${blogs1[i].title}</h2>
-								<h4 class="bloglist">${blogs1[i].date}</h4>
-								<h4 class="bloglist">${blogs1[i].author}</h4>
-                                <h4 class="bloglist">${blogs1[i].entry}</h4>
-                                <p class="bloglist">${blogs1[i].keywords}</p>
-								</div>`;
+// addToDom();
+// function addToDom(){
+// for (i = 0; i < blogs1.length; i++) {
+// 	console.log(blogs1[i]);
+// 	contentArea.innerHTML += `<div class="blog-one">
+// 								<h2>${blogs1[i].title}</h2>
+// 								<h4 class="bloglist">${blogs1[i].date}</h4>
+// 								<h4 class="bloglist">${blogs1[i].author}</h4>
+//                                 <h4 class="bloglist">${blogs1[i].entry}</h4>
+//                                 <p class="bloglist">${blogs1[i].keywords}</p>
+// 								</div>`;
 	
 	
-};
-};
+// };
+// };
