@@ -1,9 +1,18 @@
+'use strict';
+
 console.log("hey");
 
-var listLink = document.getElementById("link-list");
-var listView = document.getElementById("list-view");
+let Add = require("./add.js");
+
 
 var listBlogs = {};
+
+
+  var listLink = document.getElementById("link-list");
+  var listView = document.getElementById("list-view");
+  var addLink = document.getElementById("link-add");
+  var addView = document.getElementById("add-view");
+  
 
 listLink.addEventListener("click", function(event) {
   addView.classList.add("hidden");
@@ -11,7 +20,10 @@ listLink.addEventListener("click", function(event) {
   listView.classList.add("visible");
   listView.classList.remove("hidden");
 });
+blogRequest();
 
+
+function blogRequest() {
 let blogRequest = new XMLHttpRequest();
 blogRequest.addEventListener("load", blogRequestComplete);
 blogRequest.addEventListener("error", blogRequestFailed);
@@ -21,6 +33,7 @@ function blogRequestComplete(event){
     console.log("song data", listBlogs);
     showData(listBlogs);
 }
+}
 function showData(blogs, item){
 
     var indBlogs = Object.keys(listBlogs);
@@ -29,7 +42,7 @@ function showData(blogs, item){
     
     indBlogs.forEach(function(id, index) {
       console.log("listBlogs", listBlogs);
-      console.log("index", index)
+      console.log("index", index);
       console.log("id", id);
 
 
@@ -41,12 +54,12 @@ function showData(blogs, item){
     <h4 class="song1list genre-type">${listBlogs[id].entry}</h4>
     <p class="song1list keyword-type">${listBlogs[id].keywords}</p>
     <button class='deleteBtn'>Delete</button>
-    </div></div>`
+    </div></div>`;
     });
     
 
     $(".deleteBtn").on("click", function(){
-      $(this).parent().parent().remove()
+      $(this).parent().parent().remove();
   });
     
     // console.log("delete button", deleteButton.childNodes);
@@ -63,5 +76,10 @@ function showData(blogs, item){
 function blogRequestFailed(event) {
     console.log("dataFailed", event);
 }
+openAndSend();
+function openAndSend() {
 blogRequest.open("GET", "blog1.json");
 blogRequest.send();
+}
+
+module.exports = {blogRequest, showData, blogRequestFailed, openAndSend};
