@@ -1,5 +1,6 @@
 
-[
+{
+    "blogs": [
     {
         "title": "Week 1",
         "date": "July 5",
@@ -56,4 +57,5 @@
         "entry": "API documentation and firebase.",
         "keywords": "API"
     }
-]
+  ]
+}
