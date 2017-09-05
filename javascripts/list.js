@@ -9,7 +9,7 @@ function goJquery(blogList) {
   console.log(blogList.blogs);
 
   for(let i = 0; i < blogList.blogs.length; i++) {
-    var currentBlog = blogList.blogs[i];
+    let currentBlog = blogList.blogs[i];
     console.log(currentBlog);
    
     display += (`<div class="blog-card">
